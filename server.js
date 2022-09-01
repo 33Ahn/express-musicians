@@ -7,12 +7,14 @@ const seedMusician = require("./seedData")
 const port = 3000;
 
 //TODO
-app.get("/musicians", async (request, response) => {
+app.get("/musicians/:id", async (request, response) => {
 
-    const musicians = await Musician.findAll();  
-    const jsonContent = JSON.stringify(musicians);  
-    response.send(jsonContent);   
-    // console.log(jsonContent); 
+    const musician = await Musician.findByPk(request.params.id);
+    response.json(musician);
+
+    // with the route < "/musicians"  >
+        // const musicians = await Musician.findAll();  
+        // response.json(musicians);
 })
 
 app.listen(port, () => {
