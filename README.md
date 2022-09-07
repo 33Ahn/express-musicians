@@ -67,3 +67,18 @@ In the server.js file, begin working after your solution from Get Musicians 2
 3. Create an express route for updating (replacing) an existing musician with a new musician on your musician database based on ID.
 4. Create an express route for deleting (removing) a musician on your database
 5. Test using Postman that you can Create, Read, Update, and Delete data from your database.
+
+
+### Issues with remote repo: how to delete it and create a new one and copy it
+1. create a new repo at GitHub
+2. git remote -v
+3. git remote add <new remote repo's name> <paste new remote repo's https url>
+4. git remote -v
+5. git status
+6. write something in README file to test
+7. git add .
+8. git commit -m "somemessage"
+9. git push <name of the repo>
+10. follow the instruction, most likely the following command
+11. git push --set-upstream <name of the repo> main
+
